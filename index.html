@@ -72,19 +72,19 @@
   .stat-num span { color: var(--accent1); }
   .stat-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; max-width: 120px; line-height: 1.4; }
 
-  #about { padding: 7rem 4rem; max-width: 1200px; margin: 0 auto; }
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; } #about { background: var(--bg); }
   .section-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent3); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
   .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 3rem; line-height: 1.1; }
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .about-grid { display: grid; grid-template-columns: 1.2fr 0.7fr 1fr; gap: 2.5rem; align-items: start; }
   .about-text p { color: var(--muted); margin-bottom: 1.2rem; font-size: 1rem; }
   .about-text p strong { color: var(--text); }
   .highlight-box { background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(167,139,250,0.08)); border: 1px solid rgba(255,107,53,0.2); border-radius: 8px; padding: 1.25rem 1.5rem; margin-top: 1.5rem; }
   .highlight-box p { color: var(--text) !important; font-size: 0.95rem !important; margin: 0 !important; }
   .highlight-box span { color: var(--accent4); font-weight: 600; }
 
-  .about-right { display: flex; flex-direction: column; gap: 2rem; }
-  .avatar-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; max-width: 320px; }
+  .avatar-col { } .timeline-col { }
+  .avatar-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
   .avatar-card:hover { border-color: var(--accent3); transform: translateY(-4px); }
   .avatar-card img { width: 100%; display: block; }
   .avatar-caption { padding: 0.85rem 1.1rem; border-top: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.6rem; }
@@ -104,8 +104,8 @@
   .timeline-role { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.2rem; }
   .timeline-company { font-size: 0.88rem; color: var(--muted); }
 
-  #skills { padding: 7rem 4rem; background: var(--surface); }
-  #skills .inner { max-width: 1200px; margin: 0 auto; }
+  #skills { background: var(--surface); }
+  #skills .inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; }
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
   .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.6rem; transition: border-color 0.3s, transform 0.3s; }
   .skill-card:hover { border-color: var(--accent3); transform: translateY(-4px); }
@@ -119,7 +119,7 @@
   .tag-amber  { background: rgba(245,158,11,0.12);  color: var(--accent4); }
   .tag-sky    { background: rgba(56,189,248,0.10);  color: var(--accent5); }
 
-  #projects { padding: 7rem 4rem; max-width: 1200px; margin: 0 auto; }
+  #projects { background: var(--bg); }
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
   .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; }
   .project-card:hover { border-color: var(--accent1); transform: translateY(-5px); }
@@ -136,8 +136,8 @@
   .project-link { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
   .project-link:hover { color: var(--accent2); border-color: var(--accent2); }
 
-  #experience { padding: 7rem 4rem; background: var(--surface); }
-  #experience .inner { max-width: 1200px; margin: 0 auto; }
+  #experience { background: var(--surface); }
+  #experience .inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; }
   .exp-list { display: flex; flex-direction: column; gap: 1.25rem; }
   .exp-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem 2rem; transition: border-color 0.3s; }
   .exp-card:hover { border-color: rgba(167,139,250,0.4); }
@@ -150,21 +150,21 @@
   .exp-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--accent3); font-weight: 700; }
   .exp-bullets li strong { color: var(--text); }
 
-  #blog { padding: 7rem 4rem; max-width: 1200px; margin: 0 auto; }
+  #blog { background: var(--bg); }
   .blog-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 3rem; max-width: 800px; }
   .blog-meta { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent4); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.25rem; }
   .blog-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; margin-bottom: 1.25rem; line-height: 1.25; }
   .blog-excerpt { color: var(--muted); margin-bottom: 2rem; font-size: 1rem; line-height: 1.85; }
   .blog-topics { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 2rem; }
 
-  #video { padding: 7rem 4rem; max-width: 900px; margin: 0 auto; text-align: center; }
+  #video { background: var(--bg); text-align: center; }
   .video-placeholder { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 5rem 3rem; margin-top: 2rem; position: relative; overflow: hidden; }
   .video-placeholder::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,107,53,0.05), rgba(167,139,250,0.05)); }
   .play-btn { width: 72px; height: 72px; border-radius: 50%; background: var(--accent1); display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 1.5rem; cursor: pointer; transition: transform 0.2s, background 0.2s; position: relative; z-index: 1; }
   .play-btn:hover { transform: scale(1.1); background: #ff8555; }
 
-  #contact { padding: 7rem 4rem; background: var(--surface); }
-  #contact .inner { max-width: 700px; margin: 0 auto; text-align: center; }
+  #contact { background: var(--surface); }
+  #contact .inner { max-width: 700px; margin: 0 auto; padding: 7rem 4rem; text-align: center; }
   .contact-links { display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
   .contact-link { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.85rem 1.5rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem; }
   .contact-link:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-2px); }
@@ -210,8 +210,8 @@
   <div class="hero-inner">
     <div class="hero-tag">Data Scientist &amp; Analyst · Syracuse, NY</div>
     <h1 class="hero-name">
-      <div>Alice Galvao</div>
-      <div class="gradient">Vieira.</div>
+      <div>Alice</div>
+      <div class="gradient">Galvao Vieira.</div>
     </h1>
     <p class="hero-subtitle">
       M.S. Applied Data Science candidate at Syracuse University — graduating May 2026, GPA 3.7 — with a <strong>13+ year career in software &amp; data engineering</strong>. I've shipped production ML models at a global bank, built healthcare analytics pipelines, and I know how to turn messy data into decisions that matter.
@@ -224,7 +224,7 @@
     </div>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects</a>
-      <a href="mailto:alicegalvaov@gmail.com" class="btn btn-outline">Get in Touch</a>
+      <a href="/cdn-cgi/l/email-protection#6f0e03060c0a080e03190e00192f08020e0603410c0002" class="btn btn-outline">Get in Touch</a>
     </div>
     <div class="hero-stats">
       <div>
@@ -249,6 +249,7 @@
 
 <!-- ABOUT -->
 <section id="about">
+  <div class="section-inner">
   <div class="section-label">About me</div>
   <h2 class="section-title">Engineer turned<br>Data Scientist.</h2>
   <div class="about-grid">
@@ -257,20 +258,21 @@
       <p>My <strong>Master's in Applied Data Science at Syracuse University</strong> (graduating May 2026, GPA 3.7) gave me rigorous ML and statistical foundations. My engineering background gives me something rarer: I can actually <strong>build and deploy</strong> what I design — not just notebooks, but production-ready systems.</p>
       <p>I've analyzed 170,000+ healthcare records at GovSphere, led the development of the first ML model in Latin America to receive regulatory approval at Bank of America, and connected 10+ vendor systems with zero post-production errors.</p>
       <div class="highlight-box">
-        <p>🇧🇷 Originally from Pará, Brazil &nbsp;·&nbsp; <span>Bilingual</span>: English &amp; Portuguese &nbsp;·&nbsp; Based in Syracuse, NY</p>
+        <p>🌎 Originally from Pará, Brazil &nbsp;·&nbsp; <span>Bilingual</span>: English &amp; Portuguese &nbsp;·&nbsp; Based in Syracuse, NY &nbsp;·&nbsp; <span>Open to relocation</span></p>
       </div>
     </div>
-    <div class="about-right reveal">
+    <div class="avatar-col reveal">
       <div class="avatar-card">
         <img src="alice_avatar.jpg" alt="AI-generated illustration of Alice as a data scientist" />
         <div class="avatar-caption">
           <div class="avatar-dot"></div>
           <div class="avatar-caption-text">
-            <strong>Yes, this is AI-generated. Yes, I prompted it myself.</strong>
-            Data Scientist by day, Barbie with a server rack by night ☕
+            AI-generated — because even my headshot uses machine learning ☕
           </div>
         </div>
       </div>
+    </div>
+    <div class="timeline-col reveal">
       <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot tl-teal"></div>
@@ -331,7 +333,7 @@
     <div class="skills-grid">
       <div class="skill-card reveal">
         <div class="skill-card-icon">📊</div>
-        <div class="skill-card-title">Data Viz &amp; Analysis</div>
+        <div class="skill-card-title">Data Visualization &amp; Analysis</div>
         <div class="skill-tags">
           <span class="skill-tag tag-teal">Tableau</span><span class="skill-tag tag-teal">Power BI</span><span class="skill-tag tag-teal">Python</span><span class="skill-tag tag-teal">Pandas</span><span class="skill-tag tag-teal">NumPy</span><span class="skill-tag tag-teal">Matplotlib</span><span class="skill-tag tag-teal">Seaborn</span><span class="skill-tag tag-teal">R</span>
         </div>
@@ -368,7 +370,7 @@
         <div class="skill-card-icon">🌎</div>
         <div class="skill-card-title">Domains &amp; Languages</div>
         <div class="skill-tags">
-          <span class="skill-tag tag-teal">English (Fluent)</span><span class="skill-tag tag-teal">Portuguese (Native)</span><span class="skill-tag tag-orange">Healthcare Analytics</span><span class="skill-tag tag-orange">Financial Data</span><span class="skill-tag tag-purple">Regulatory Compliance</span>
+          <span class="skill-tag tag-orange">Healthcare Analytics</span><span class="skill-tag tag-orange">Financial Data</span><span class="skill-tag tag-purple">Regulatory Compliance</span><span class="skill-tag tag-sky">Telecom</span>
         </div>
       </div>
     </div>
@@ -377,6 +379,7 @@
 
 <!-- PROJECTS -->
 <section id="projects">
+  <div class="section-inner">
   <div class="section-label">Portfolio</div>
   <h2 class="section-title">Selected Projects.</h2>
   <p style="color:var(--muted);margin-bottom:2.5rem;font-family:var(--font-mono);font-size:0.78rem;letter-spacing:0.04em;">
@@ -436,6 +439,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
@@ -507,11 +511,12 @@
 
 <!-- BLOG -->
 <section id="blog">
+  <div class="section-inner">
   <div class="section-label">Reflection</div>
   <h2 class="section-title">My Journey.</h2>
   <div class="blog-card reveal">
     <div class="blog-meta">Reflective Essay · ~3,000 words · May 2026</div>
-    <div class="blog-title">From São Paulo to Syracuse: Reflections on My Applied Data Science Journey</div>
+    <div class="blog-title">From the Amazon to New York: Reflections on My Applied Data Science Journey</div>
     <div class="blog-excerpt">
       <p>I came into this program already knowing how to build things. What I didn't know was how to ask the right questions of the data those systems produced. This is my reflection on what changed — and what surprised me — over the past two years...</p>
     </div>
@@ -523,10 +528,12 @@
     </div>
     <a href="blog.html" class="btn btn-outline">Read Full Post →</a>
   </div>
+  </div>
 </section>
 
 <!-- VIDEO -->
 <section id="video">
+  <div class="section-inner" style="max-width:900px;">
   <div class="section-label">Presentation</div>
   <h2 class="section-title">Watch My Story.</h2>
   <p style="color:var(--muted);max-width:520px;margin:0 auto 1rem;text-align:center;">A 1–2 minute summary of what I learned in the program and where I'm headed next.</p>
@@ -535,6 +542,7 @@
     <div class="play-btn">▶</div>
     <p style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;position:relative;z-index:1;">Presentation Video — Coming Soon</p>
     <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--muted);position:relative;z-index:1;">Replace this block with a YouTube or Vimeo embed</p>
+  </div>
   </div>
 </section>
 
@@ -558,7 +566,7 @@
   <p>M.S. Applied Data Science · Syracuse University · iSchool</p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 const canvas = document.getElementById('hero-canvas');
 const ctx = canvas.getContext('2d');
 let W, H;
@@ -591,7 +599,4 @@ animate();
 
 const revealEls = document.querySelectorAll('.reveal');
 revealEls.forEach(el => el.classList.add('hidden'));
-const observer = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.remove('hidden'); e.target.classList.add('visible'); } }); },{threshold:0.1});
-revealEls.forEach(el=>observer.observe(el));
-
-const sects = document.
+const observer = new IntersectionObserver(entries=>{ entries.forEach(e=>{ if(e.isIntersecting){ e.target.class
