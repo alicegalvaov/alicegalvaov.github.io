@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crime x Sports, Alice Galvao Vieira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --card: #1a1a24;
+    --border: rgba(255,255,255,0.07);
+    --text: #f0eff8;
+    --muted: #888799;
+    --accent1: #ff6b35;
+    --accent2: #00e5b3;
+    --accent3: #a78bfa;
+    --accent4: #f59e0b;
+    --accent5: #38bdf8;
+    --accent-pink: #e91e8c;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 4rem;
+    backdrop-filter: blur(20px);
+    background: rgba(10,10,15,0.75);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; }
+  .nav-logo span { color: var(--accent-pink); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent-pink); }
+
+  .page-wrap { max-width: 860px; margin: 0 auto; padding: 8rem 4rem 6rem; }
+
+  .back-link { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 3rem; transition: color 0.2s; }
+  .back-link:hover { color: var(--accent-pink); }
+
+  .project-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-pink); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+  .project-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 2rem; }
+
+  .meta-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+  .skill-tag { font-family: var(--font-mono); font-size: 0.68rem; padding: 0.28rem 0.6rem; border-radius: 3px; letter-spacing: 0.03em; }
+  .tag-orange { background: rgba(255,107,53,0.13); color: var(--accent1); }
+  .tag-teal   { background: rgba(0,229,179,0.10);  color: var(--accent2); }
+  .tag-purple { background: rgba(167,139,250,0.13); color: var(--accent3); }
+  .tag-amber  { background: rgba(245,158,11,0.12);  color: var(--accent4); }
+  .tag-sky    { background: rgba(56,189,248,0.10);  color: var(--accent5); }
+
+  .stat-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+  .stat-box { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+  .stat-box .num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--accent1); }
+  .stat-box .lbl { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; line-height: 1.4; }
+
+  .section-head { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--text); }
+  p { color: var(--muted); margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.85; }
+  p strong { color: var(--text); }
+
+  ul { list-style: none; margin-bottom: 1.25rem; }
+  ul li { color: var(--muted); font-size: 1rem; padding: 0.3rem 0 0.3rem 1.25rem; position: relative; line-height: 1.7; }
+  ul li::before { content: '›'; position: absolute; left: 0; color: var(--accent-pink); font-weight: 700; }
+  ul li strong { color: var(--text); }
+
+  .highlight-box { background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(167,139,250,0.08)); border: 1px solid rgba(255,107,53,0.2); border-radius: 8px; padding: 1.5rem; margin: 2rem 0; }
+  .highlight-box p { margin: 0; color: var(--text); }
+
+  .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0 2rem; }
+  .dashboard-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.25rem; }
+  .dashboard-card .db-num { font-family: var(--font-mono); font-size: 0.7rem; color: var(--accent4); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+  .dashboard-card .db-title { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; margin-bottom: 0.4rem; }
+  .dashboard-card p { font-size: 0.88rem; margin: 0; }
+
+  .chart-section { margin: 2.5rem 0; }
+  .chart-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-pink); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 0.75rem; }
+  .chart-img { width: 100%; border-radius: 8px; border: 1px solid var(--border); display: block; }
+  .chart-caption { font-family: var(--font-mono); font-size: 0.7rem; color: var(--muted); margin-top: 0.6rem; line-height: 1.5; }
+  .chart-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+
+  .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+  .btn { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.9rem 2rem; border-radius: 4px; cursor: pointer; transition: all 0.2s; border: none; display: inline-block; }
+  .btn-primary { background: var(--accent1); color: #fff; }
+  .btn-primary:hover { background: #ff8555; transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-outline:hover { border-color: var(--accent-pink); color: var(--accent-pink); transform: translateY(-2px); }
+
+  footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  footer p { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .page-wrap { padding: 6rem 1.5rem 4rem; }
+    .dashboard-grid, .chart-grid-2 { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">ALICE<span>.</span>DATA</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+  <div class="project-label">Data Visualization · Project 03</div>
+  <h1>Crime x Sports: Does Your Team's Performance Affect Local Crime Rates?</h1>
+
+  <div class="meta-row">
+    <span class="skill-tag tag-teal">Tableau</span>
+    <span class="skill-tag tag-teal">Data Visualization</span>
+    <span class="skill-tag tag-orange">FBI Crime Data</span>
+    <span class="skill-tag tag-orange">Sports Analytics</span>
+    <span class="skill-tag tag-purple">Dashboard Design</span>
+    <span class="skill-tag tag-purple">Geospatial Mapping</span>
+    <span class="skill-tag tag-amber">SQL</span>
+    <span class="skill-tag tag-sky">Storytelling with Data</span>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="num">4</div><div class="lbl">Major Sports Leagues</div></div>
+    <div class="stat-box"><div class="num">5</div><div class="lbl">Tableau Dashboards</div></div>
+    <div class="stat-box"><div class="num">4</div><div class="lbl">Data Sources</div></div>
+    <div class="stat-box"><div class="num">50+</div><div class="lbl">U.S. Cities Analyzed</div></div>
+  </div>
+
+  <div class="section-head">The Question</div>
+  <p>When your city's team wins, do people celebrate peacefully? When they lose, does frustration spill into the streets? This project explored whether professional sports results, wins, losses, playoff runs, championships, have any measurable relationship with local crime rates across the United States.</p>
+  <p>The project was built for a Data Visualization course, with the emphasis on <strong>communicating complex multi-source data clearly through Tableau dashboards</strong> that anyone, not just data experts, could navigate and explore.</p>
+
+  <div class="section-head">Data Sources</div>
+  <ul>
+    <li><strong>FBI Crime Data Explorer:</strong> weekly crime incidents by city, including incident date and time, crime type (homicide, robbery, assault, larceny, etc.), and location type</li>
+    <li><strong>Pro Football Reference, Basketball Reference, Hockey Reference, Baseball Reference:</strong> weekly team performance data across NFL, NBA, NHL, and MLB including wins, losses, win percentage, and playoff results</li>
+    <li><strong>League game schedules:</strong> weekly calendar of games to identify game days vs non-game days for each city</li>
+  </ul>
+
+  <div class="highlight-box">
+    <p>The core analytical challenge was matching game-day dates to crime incident dates at the city level, across four different leagues with different season schedules, and then comparing crime patterns on game days (broken down by win vs loss) against non-game days.</p>
+  </div>
+
+  <div class="section-head">The 5 Dashboards</div>
+
+  <div class="dashboard-grid">
+    <div class="dashboard-card">
+      <div class="db-num">Dashboard 01</div>
+      <div class="db-title">Crime Rate per State</div>
+      <p>Crime rates per 100K inhabitants mapped by state, top crime types nationally, and monthly crime volume trends throughout the year.</p>
+    </div>
+    <div class="dashboard-card">
+      <div class="db-num">Dashboard 02</div>
+      <div class="db-title">Crime Insights with Temporal Patterns</div>
+      <p>Geographic distribution of crime by type and target (person vs property), a drilldown table by offense category, and crime volume by hour of day.</p>
+    </div>
+    <div class="dashboard-card">
+      <div class="db-num">Dashboard 03</div>
+      <div class="db-title">Sports Analysis per State</div>
+      <p>Distribution of teams across the U.S. by sport, top 10 teams by total wins and losses, filterable by league.</p>
+    </div>
+    <div class="dashboard-card">
+      <div class="db-num">Dashboard 04</div>
+      <div class="db-title">City Crime x Sports Comparison</div>
+      <p>Side-by-side city comparison of top crime types, hourly crime patterns, playoff performance, and yearly winning percentage across all four sports.</p>
+    </div>
+  </div>
+
+  <div class="dashboard-card" style="margin-bottom: 2rem;">
+    <div class="db-num">Dashboard 05</div>
+    <div class="db-title">Crime on GameDay vs Non-GameDay</div>
+    <p>The core finding dashboard. For each city, shows the percentage breakdown of crime types on game days (split by win and loss) compared to non-game days. Filterable by city across all cities in the dataset.</p>
+  </div>
+
+  <div class="section-head">Dashboard Walkthroughs</div>
+
+  <div class="chart-section">
+    <div class="chart-label">Dashboard 01: Crime Rate per State</div>
+    <img src="crime_rate_state.png" alt="Crime rate per state dashboard" class="chart-img" />
+    <div class="chart-caption">The choropleth map shows crime rate per 100K inhabitants by state. The bubble chart highlights top crime types nationally, with Motor Vehicle Theft, Simple Assault, and Larceny leading. The line chart shows crimes peak in summer months and dip in February.</div>
+  </div>
+
+  <div class="chart-section">
+    <div class="chart-label">Dashboard 02: Crime Insights with Temporal Patterns</div>
+    <img src="crime_insights.png" alt="Crime insights temporal patterns dashboard" class="chart-img" />
+    <div class="chart-caption">The interactive map allows filtering by crime type and state. The hour-of-day chart reveals a sharp morning spike around noon and steady evening activity, with a low point in the early morning hours between 3am and 6am.</div>
+  </div>
+
+  <div class="chart-section">
+    <div class="chart-label">Dashboard 03: Sports Analysis per State</div>
+    <img src="sports_analysis.png" alt="Sports analysis per state dashboard" class="chart-img" />
+    <div class="chart-caption">Team density map shows California with 10 basketball teams, Texas and Florida with 7. The win/loss bar charts allow comparison of team performance across leagues, filterable by sport.</div>
+  </div>
+
+  <div class="chart-section">
+    <div class="chart-label">Dashboard 04: City Crime x Sports Side-by-Side</div>
+    <img src="crime_x_sports.png" alt="City crime x sports side by side comparison dashboard" class="chart-img" />
+    <div class="chart-caption">Philadelphia vs New York City comparison. The hourly crime chart shows Philadelphia has a midday spike while NYC crime is more evenly distributed throughout the day. Yearly winning percentage heatmaps show performance across all four sports from 2020 to 2024.</div>
+  </div>
+
+  <div class="section-head">The GameDay Finding</div>
+  <p>The most interesting dashboard was the GameDay comparison. The data revealed that the relationship between sports results and crime is <strong>not as dramatic as popular intuition suggests</strong>, but patterns do exist at the city and crime-type level.</p>
+
+  <div class="chart-grid-2">
+    <div class="chart-section">
+      <div class="chart-label">Pittsburgh: Crime on GameDay</div>
+      <img src="gameday_pittsburgh.png" alt="Pittsburgh game day crime breakdown" class="chart-img" />
+      <div class="chart-caption">In Pittsburgh, Larceny/Theft spikes slightly on win days (27.36% vs 24.59% on loss days), while Assault offenses are nearly the same across win and loss game days.</div>
+    </div>
+    <div class="chart-section">
+      <div class="chart-label">Detroit: Crime on GameDay</div>
+      <img src="gameday_detroit.png" alt="Detroit game day crime breakdown" class="chart-img" />
+      <div class="chart-caption">Detroit shows Assault as the dominant crime category on both win and loss days (27.80% and 28.61%), with very little variation by game outcome, suggesting other city-level factors drive crime more than sports results.</div>
+    </div>
+  </div>
+
+  <div class="section-head">Key Takeaways</div>
+  <ul>
+    <li><strong>Motor Vehicle Theft, Simple Assault, and Larceny</strong> are the most common crime types nationally across all cities in the dataset</li>
+    <li><strong>Crime peaks in summer</strong> and drops in February, consistent with seasonal patterns seen in other studies</li>
+    <li><strong>The GameDay effect is city-specific</strong> and crime-type specific. No universal pattern emerged across all cities and sports</li>
+    <li><strong>Larceny tends to increase slightly on win days</strong> in some cities, possibly reflecting larger crowd gatherings and more opportunity for theft</li>
+    <li><strong>The dataset's scale made visualization design the central challenge</strong>, with millions of records across multiple geographies and sports, the project was fundamentally an exercise in making complexity navigable</li>
+  </ul>
+
+  <div class="section-head">What This Project Demonstrates</div>
+  <p>More than the findings themselves, this project showcases the ability to <strong>design multi-layered, interactive Tableau dashboards</strong> that guide a non-technical audience through a complex analytical story. It involved data from four different sources with different structures and granularities, required significant data preparation and joining logic, and demanded thoughtful decisions about how to present uncertainty honestly, including acknowledging that the sports-crime relationship is hard to isolate cleanly at the city level.</p>
+
+  <div class="btn-row">
+    <a href="https://github.com/alicegalvaov" target="_blank" class="btn btn-primary">View on GitHub</a>
+    <a href="#" class="btn btn-outline">Live Tableau Dashboard</a>
+    <a href="index.html#projects" class="btn btn-outline">Back to Projects</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Alice Galvao Vieira</p>
+  <p>M.S. Applied Data Science · Syracuse University · iSchool</p>
+</footer>
+
+</body>
+</html>

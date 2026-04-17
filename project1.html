@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Job Market Analysis — Alice Galvao Vieira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --card: #1a1a24;
+    --border: rgba(255,255,255,0.07);
+    --text: #f0eff8;
+    --muted: #888799;
+    --accent1: #ff6b35;
+    --accent2: #00e5b3;
+    --accent3: #a78bfa;
+    --accent4: #f59e0b;
+    --accent5: #38bdf8;
+    --accent-pink: #e91e8c;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 16px; line-height: 1.7; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 4rem;
+    backdrop-filter: blur(20px);
+    background: rgba(10,10,15,0.75);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; }
+  .nav-logo span { color: var(--accent-pink); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent-pink); }
+
+  .page-wrap { max-width: 860px; margin: 0 auto; padding: 8rem 4rem 6rem; }
+
+  .back-link {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--accent-pink); }
+
+  .project-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent-pink);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .project-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .skill-tag { font-family: var(--font-mono); font-size: 0.68rem; padding: 0.28rem 0.6rem; border-radius: 3px; letter-spacing: 0.03em; }
+  .tag-orange { background: rgba(255,107,53,0.13); color: var(--accent1); }
+  .tag-teal   { background: rgba(0,229,179,0.10);  color: var(--accent2); }
+  .tag-purple { background: rgba(167,139,250,0.13); color: var(--accent3); }
+  .tag-amber  { background: rgba(245,158,11,0.12);  color: var(--accent4); }
+  .tag-sky    { background: rgba(56,189,248,0.10);  color: var(--accent5); }
+
+  .stat-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  .stat-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  .stat-box .num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--accent1); }
+  .stat-box .lbl { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.25rem; }
+
+  .section-head {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem;
+    color: var(--text);
+  }
+  p { color: var(--muted); margin-bottom: 1.25rem; font-size: 1rem; line-height: 1.85; }
+  p strong { color: var(--text); }
+
+  ul { list-style: none; margin-bottom: 1.25rem; }
+  ul li { color: var(--muted); font-size: 1rem; padding: 0.3rem 0 0.3rem 1.25rem; position: relative; line-height: 1.7; }
+  ul li::before { content: '›'; position: absolute; left: 0; color: var(--accent-pink); font-weight: 700; }
+  ul li strong { color: var(--text); }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(255,107,53,0.08), rgba(167,139,250,0.08));
+    border: 1px solid rgba(255,107,53,0.2);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  .highlight-box p { margin: 0; color: var(--text); }
+
+  .arch-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .arch-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  .arch-card .arch-label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent4);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .arch-card .arch-title { font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .arch-card p { font-size: 0.88rem; margin: 0; }
+
+  .findings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1.5rem 0 2rem;
+  }
+  .finding-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+  }
+  .finding-card .finding-region {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--accent-pink);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.5rem;
+  }
+  .finding-card p { font-size: 0.9rem; margin: 0; }
+
+
+  .chart-section { margin: 2.5rem 0; }
+  .chart-label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--accent-pink);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+  }
+  .chart-img {
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: block;
+  }
+  .chart-caption {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-top: 0.6rem;
+    line-height: 1.5;
+  }
+  .chart-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .chart-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  @media (max-width: 768px) {
+    .chart-grid-2, .chart-grid-3 { grid-template-columns: 1fr; }
+  }
+
+  .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+  .btn { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.9rem 2rem; border-radius: 4px; cursor: pointer; transition: all 0.2s; border: none; display: inline-block; }
+  .btn-primary { background: var(--accent1); color: #fff; }
+  .btn-primary:hover { background: #ff8555; transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-outline:hover { border-color: var(--accent-pink); color: var(--accent-pink); transform: translateY(-2px); }
+
+  footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  footer p { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .page-wrap { padding: 6rem 1.5rem 4rem; }
+    .arch-grid { grid-template-columns: 1fr; }
+    .findings-grid { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">ALICE<span>.</span>DATA</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <a href="index.html#projects" class="back-link">← Back to Projects</a>
+
+  <div class="project-label">Big Data · Project 01</div>
+  <h1>What Skills Does Your Region Actually Want? A Big Data Analysis of the U.S. Data Job Market</h1>
+
+  <div class="meta-row">
+    <span class="skill-tag tag-orange">Python</span>
+    <span class="skill-tag tag-orange">PySpark</span>
+    <span class="skill-tag tag-teal">Snowflake</span>
+    <span class="skill-tag tag-teal">Tableau</span>
+    <span class="skill-tag tag-purple">NLP</span>
+    <span class="skill-tag tag-purple">ETL Pipeline</span>
+    <span class="skill-tag tag-sky">JSearch API</span>
+    <span class="skill-tag tag-amber">Big Data</span>
+    <span class="skill-tag tag-amber">Data Warehousing</span>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat-box"><div class="num">3,900</div><div class="lbl">Job Postings</div></div>
+    <div class="stat-box"><div class="num">335</div><div class="lbl">Cities Covered</div></div>
+    <div class="stat-box"><div class="num">23</div><div class="lbl">U.S. States</div></div>
+    <div class="stat-box"><div class="num">3</div><div class="lbl">Data Roles Analyzed</div></div>
+  </div>
+
+  <div class="section-head">Overview</div>
+  <p>If you are trying to break into data science, the advice you get is often the same everywhere: learn Python, learn SQL, maybe pick up some cloud tools. But is that really true across the entire country? Does it matter whether you are job hunting in San Francisco versus Chicago versus New York?</p>
+  <p>This project set out to answer that question. By collecting and analyzing <strong>3,900 real job postings</strong> from across the United States, I built a regional picture of what employers actually ask for when they hire Data Analysts, Data Scientists, and Data Engineers. The findings reveal that location matters more than most people think.</p>
+
+  <div class="section-head">The Problem</div>
+  <p>Job seekers and students are often given generic career advice that ignores regional variation. A Data Analyst role in New York looks very different from one in Dallas or Seattle. The tools, the industries, and the expectations all shift depending on where the job is located. Without a data-driven view of this, candidates risk investing time in skills that are not particularly valued in their target market.</p>
+  <p>This project aimed to surface those regional differences and give job seekers, students, and educators a clearer picture of the data job landscape across the U.S.</p>
+
+  <div class="section-head">Data Collection</div>
+  <p>Job postings were collected using the <strong>JSearch API</strong>, which aggregates real-time listings from LinkedIn, Indeed, Glassdoor, ZipRecruiter, and Google for Jobs. Python scripts were developed to systematically query the API for three target roles across major cities in four U.S. regions.</p>
+  <ul>
+    <li><strong>Northeast:</strong> New York City, Boston, Philadelphia, Washington D.C., Pittsburgh</li>
+    <li><strong>Midwest:</strong> Chicago, Detroit, Minneapolis, Columbus, St. Louis</li>
+    <li><strong>South:</strong> Atlanta, Dallas, Miami, Houston, Charlotte</li>
+    <li><strong>West:</strong> Los Angeles, San Francisco, Seattle, Denver, Phoenix</li>
+  </ul>
+  <p>Each API call retrieved multiple postings per role per city, resulting in a dataset of 3,900 unique job postings covering 335 cities across 23 states. Raw API responses were stored in JSON format to allow for flexible reprocessing.</p>
+
+  <div class="section-head">Technical Architecture</div>
+  <p>The project follows a modern big data pipeline built on cloud tools and distributed computing. The architecture uses a three-layer data model:</p>
+
+  <div class="arch-grid">
+    <div class="arch-card">
+      <div class="arch-label">Layer 01</div>
+      <div class="arch-title">Bronze Schema</div>
+      <p>Raw JSON responses from the JSearch API, stored with metadata and ingestion timestamps. No transformations applied at this stage.</p>
+    </div>
+    <div class="arch-card">
+      <div class="arch-label">Layer 02</div>
+      <div class="arch-title">Silver Schema</div>
+      <p>Cleaned and structured job data. PySpark was used for data cleaning, normalization, and NLP-based skill extraction from raw job description text.</p>
+    </div>
+    <div class="arch-card">
+      <div class="arch-label">Layer 03</div>
+      <div class="arch-title">Gold Schema</div>
+      <p>Analytics-ready fact and dimension tables in Snowflake, including job posting facts, regional dimensions, skills dimensions, and time dimensions.</p>
+    </div>
+  </div>
+
+  <p><strong>PySpark</strong> handled all data processing and transformation including cleaning, normalization, and natural language processing to identify and extract technical skills from job description text. Processed data was loaded directly into <strong>Snowflake</strong> using PySpark, and <strong>Tableau</strong> was connected to Snowflake to build the final dashboards.</p>
+
+  <div class="section-head">Key Findings</div>
+
+  <div class="highlight-box">
+    <p>The West leads in total job volume, followed by the South, Northeast, and Midwest. Data Engineers represent the largest share of postings at 42%, followed by Data Scientists at 32% and Data Analysts at 26%.</p>
+  </div>
+
+  <p>Beyond the volume numbers, the regional skill breakdowns revealed clear patterns:</p>
+
+  <div class="chart-section">
+    <div class="chart-label">Overall Top 10 Skills (excluding Python and Excel)</div>
+    <img src="top10skills.png" alt="Top 10 skills bubble chart" class="chart-img" />
+    <div class="chart-caption">Bubble size represents demand rank. Machine learning, AWS, Azure, and statistics lead across all three roles. Note: Python and Excel were removed as they ranked first and second overall across positions.</div>
+  </div>
+
+  <div class="findings-grid">
+    <div class="finding-card">
+      <div class="finding-region">Visualization Tools</div>
+      <p>Tableau dominates in western states. Power BI is more prevalent in the South and Midwest, reflecting the different industry concentrations in those regions.</p>
+    </div>
+    <div class="finding-card">
+      <div class="finding-region">Database Platforms</div>
+      <p>Snowflake is most popular in the West, BigQuery leads in the South, and PostgreSQL appears most frequently in the Northeast.</p>
+    </div>
+    <div class="finding-card">
+      <div class="finding-region">Top States by Role</div>
+      <p>California leads in Data Scientist demand, Texas in Data Engineer roles, and New York in Data Analyst postings, reflecting each state's dominant industries.</p>
+    </div>
+    <div class="finding-card">
+      <div class="finding-region">Top Hiring Companies</div>
+      <p>The most active hirers included VirtualVocations, Capital One, Humana, Meta, and EY, spanning remote platforms, finance, healthcare, and consulting.</p>
+    </div>
+  </div>
+
+  <div class="section-head">Regional Patterns</div>
+  <div class="chart-grid-2">
+    <div class="chart-section">
+      <div class="chart-label">Visualization Tool by State</div>
+      <img src="VisualizationRegion.png" alt="Visualization tool preference by region map" class="chart-img" />
+      <div class="chart-caption">Tableau dominates the West while Power BI leads the South, Midwest, and Northeast.</div>
+    </div>
+    <div class="chart-section">
+      <div class="chart-label">Database Tool by State</div>
+      <img src="DatabaseRegion.png" alt="Database tool preference by region map" class="chart-img" />
+      <div class="chart-caption">Snowflake leads in most states, with BigQuery strong in the West and PostgreSQL in the Northeast.</div>
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <div class="chart-label">Top State by Position</div>
+    <img src="StatebyPosition.png" alt="Top state by data role map" class="chart-img" />
+    <div class="chart-caption">California leads in Data Scientist demand, Texas in Data Engineer roles, and New York in Data Analyst postings.</div>
+  </div>
+
+  <div class="section-head">Role-Specific Skill Insights</div>
+  <ul>
+    <li><strong>Data Analyst:</strong> Excel remains the most requested skill, followed by Tableau, Power BI, BigQuery, and Snowflake. High demand in states with strong healthcare, finance, and retail sectors.</li>
+    <li><strong>Data Scientist:</strong> Machine Learning is the defining skill, with Statistics, PyTorch, Deep Learning, NLP, and cloud tools (Azure, AWS) rounding out the top requirements. Most evenly distributed across tech hubs and academic centers.</li>
+    <li><strong>Data Engineer:</strong> Azure is the dominant skill, followed by Spark, Databricks, BigQuery, and AWS. Concentrated in states with large-scale cloud infrastructure adoption.</li>
+  </ul>
+
+  <div class="chart-grid-3">
+    <div class="chart-section">
+      <div class="chart-label">Data Analyst Top Skills</div>
+      <img src="DASkills.png" alt="Data Analyst top skills bubble chart" class="chart-img" />
+      <div class="chart-caption">Excel leads, followed by Tableau, Power BI, and cloud platforms. Python removed (ranked 1st across all roles).</div>
+    </div>
+    <div class="chart-section">
+      <div class="chart-label">Data Scientist Top Skills</div>
+      <img src="DSSkills.png" alt="Data Scientist top skills bubble chart" class="chart-img" />
+      <div class="chart-caption">Machine learning dominates, with statistics, R, PyTorch, and deep learning rounding out the top skills.</div>
+    </div>
+    <div class="chart-section">
+      <div class="chart-label">Data Engineer Top Skills</div>
+      <img src="DESkills.png" alt="Data Engineer top skills bubble chart" class="chart-img" />
+      <div class="chart-caption">Azure leads, followed by AWS, Databricks, Spark, and BigQuery. Strong cloud and infrastructure focus.</div>
+    </div>
+  </div>
+
+  <div class="section-head">Conclusion</div>
+  <p>The data job market is not uniform. Where you live shapes what skills you need, which tools employers expect, and which roles are most available. For job seekers, this means that regional awareness should be part of any career planning strategy. For universities and bootcamps, it highlights the value of tailoring curricula to the local market rather than teaching a single universal skillset.</p>
+  <p>Cloud platforms like Azure and AWS appeared consistently across all roles and regions, making them strong general investments. But the specific tools, the emphasis between analytics and engineering, and the dominant industries all vary meaningfully by location.</p>
+
+  <div class="btn-row">
+    <a href="https://github.com/alicegalvaov/job-listings-bigdata" target="_blank" class="btn btn-primary">View on GitHub</a>
+    <a href="#" class="btn btn-outline">Live Tableau Dashboard</a>
+    <a href="index.html#projects" class="btn btn-outline">Back to Projects</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Alice Galvao Vieira</p>
+  <p>M.S. Applied Data Science · Syracuse University · iSchool</p>
+</footer>
+
+</body>
+</html>

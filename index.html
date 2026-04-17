@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alice Galvao Vieira — Data Scientist</title>
+<title>Alice Galvao Vieira, Data Scientist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0a0a0f;
@@ -20,7 +20,8 @@
     --accent3: #a78bfa;
     --accent4: #f59e0b;
     --accent5: #38bdf8;
-    --font-display: 'Syne', sans-serif;
+    --accent-pink: #e91e8c;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
     --font-body: 'Outfit', sans-serif;
     --font-mono: 'DM Mono', monospace;
   }
@@ -40,17 +41,17 @@
     border-bottom: 1px solid var(--border);
   }
   .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; }
-  .nav-logo span { color: var(--accent1); }
+  .nav-logo span { color: var(--accent-pink); }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--accent2); }
+  .nav-links a:hover { color: var(--accent-pink); }
 
   section { position: relative; z-index: 1; }
 
   #hero { min-height: 100vh; display: flex; align-items: center; padding: 8rem 4rem 6rem; }
   .hero-inner { max-width: 960px; }
-  .hero-tag { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent2); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
-  .hero-tag::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--accent2); }
+  .hero-tag { font-family: var(--font-mono); font-size: 0.78rem; color: var(--accent-pink); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+  .hero-tag::before { content: ''; display: block; width: 2rem; height: 1px; background: var(--accent-pink); }
   .hero-name { font-family: var(--font-display); font-size: clamp(2.8rem, 7vw, 6.5rem); font-weight: 800; line-height: 1; letter-spacing: -0.03em; margin-bottom: 1rem; }
   .hero-name .gradient { background: linear-gradient(90deg, var(--accent1), var(--accent4), var(--accent3)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
   .hero-subtitle { font-size: 1.1rem; color: var(--muted); max-width: 600px; margin-bottom: 2.5rem; line-height: 1.85; }
@@ -61,19 +62,20 @@
   .badge-teal   { background: rgba(0,229,179,0.1);   color: var(--accent2); border: 1px solid rgba(0,229,179,0.25); }
   .badge-purple { background: rgba(167,139,250,0.12); color: var(--accent3); border: 1px solid rgba(167,139,250,0.3); }
   .badge-amber  { background: rgba(245,158,11,0.12);  color: var(--accent4); border: 1px solid rgba(245,158,11,0.3); }
+  .badge-pink   { background: rgba(233,30,140,0.12);  color: var(--accent-pink); border: 1px solid rgba(233,30,140,0.3); }
   .hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.9rem 2rem; border-radius: 4px; cursor: pointer; transition: all 0.2s; border: none; display: inline-block; }
   .btn-primary { background: var(--accent1); color: #fff; }
   .btn-primary:hover { background: #ff8555; transform: translateY(-2px); }
   .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
-  .btn-outline:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-2px); }
+  .btn-outline:hover { border-color: var(--accent-pink); color: var(--accent-pink); transform: translateY(-2px); }
   .hero-stats { display: flex; gap: 2.5rem; margin-top: 4.5rem; padding-top: 3rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
   .stat-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; }
   .stat-num span { color: var(--accent1); }
   .stat-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; max-width: 120px; line-height: 1.4; }
 
   .section-inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; } #about { background: var(--bg); }
-  .section-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent3); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
+  .section-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-pink); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
   .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 3rem; line-height: 1.1; }
   .about-grid { display: grid; grid-template-columns: 1.2fr 0.7fr 1fr; gap: 2.5rem; align-items: start; }
@@ -85,13 +87,13 @@
 
   .avatar-col { } .timeline-col { }
   .avatar-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; }
-  .avatar-card:hover { border-color: var(--accent3); transform: translateY(-4px); }
+  .avatar-card:hover { border-color: var(--accent-pink); transform: translateY(-4px); }
   .avatar-card img { width: 100%; display: block; }
   .avatar-caption { padding: 0.85rem 1.1rem; border-top: 1px solid var(--border); display: flex; align-items: flex-start; gap: 0.6rem; }
-  .avatar-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent3); flex-shrink: 0; margin-top: 0.35rem; animation: blink 2s infinite; }
+  .avatar-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent-pink); flex-shrink: 0; margin-top: 0.35rem; animation: blink 2s infinite; }
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.25} }
   .avatar-caption-text { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); line-height: 1.6; }
-  .avatar-caption-text strong { color: var(--accent3); display: block; margin-bottom: 0.1rem; }
+  .avatar-caption-text strong { color: var(--accent-pink); display: block; margin-bottom: 0.1rem; }
 
   .timeline { position: relative; padding-left: 2rem; }
   .timeline::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: linear-gradient(180deg, var(--accent1), var(--accent3), var(--accent2)); }
@@ -108,7 +110,7 @@
   #skills .inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; }
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
   .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.6rem; transition: border-color 0.3s, transform 0.3s; }
-  .skill-card:hover { border-color: var(--accent3); transform: translateY(-4px); }
+  .skill-card:hover { border-color: var(--accent-pink); transform: translateY(-4px); }
   .skill-card-icon { font-size: 1.6rem; margin-bottom: 0.85rem; }
   .skill-card-title { font-family: var(--font-display); font-weight: 700; margin-bottom: 0.75rem; font-size: 1rem; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
@@ -118,11 +120,12 @@
   .tag-purple { background: rgba(167,139,250,0.13); color: var(--accent3); }
   .tag-amber  { background: rgba(245,158,11,0.12);  color: var(--accent4); }
   .tag-sky    { background: rgba(56,189,248,0.10);  color: var(--accent5); }
+  .tag-pink   { background: rgba(233,30,140,0.10);  color: var(--accent-pink); }
 
   #projects { background: var(--bg); }
   .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
   .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; }
-  .project-card:hover { border-color: var(--accent1); transform: translateY(-5px); }
+  .project-card:hover { border-color: var(--accent-pink); transform: translateY(-5px); }
   .project-card.featured { grid-column: span 2; }
   .project-header { padding: 2rem 2rem 0; position: relative; }
   .project-accent { position: absolute; top: 0; right: 2rem; width: 60px; height: 4px; border-radius: 0 0 4px 4px; }
@@ -134,13 +137,13 @@
   .project-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1.25rem; }
   .project-links { display: flex; gap: 1rem; }
   .project-link { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted); border-bottom: 1px solid var(--border); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
-  .project-link:hover { color: var(--accent2); border-color: var(--accent2); }
+  .project-link:hover { color: var(--accent-pink); border-color: var(--accent-pink); }
 
   #experience { background: var(--surface); }
   #experience .inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; }
   .exp-list { display: flex; flex-direction: column; gap: 1.25rem; }
   .exp-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem 2rem; transition: border-color 0.3s; }
-  .exp-card:hover { border-color: rgba(167,139,250,0.4); }
+  .exp-card:hover { border-color: var(--accent-pink); }
   .exp-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem; }
   .exp-role { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; }
   .exp-company { font-size: 0.9rem; color: var(--muted); margin-top: 0.2rem; }
@@ -167,7 +170,7 @@
   #contact .inner { max-width: 700px; margin: 0 auto; padding: 7rem 4rem; text-align: center; }
   .contact-links { display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
   .contact-link { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.85rem 1.5rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem; }
-  .contact-link:hover { border-color: var(--accent2); color: var(--accent2); transform: translateY(-2px); }
+  .contact-link:hover { border-color: var(--accent-pink); color: var(--accent-pink); transform: translateY(-2px); }
 
   footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
   footer p { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
@@ -214,10 +217,10 @@
       <div class="gradient">Galvao Vieira.</div>
     </h1>
     <p class="hero-subtitle">
-      M.S. Applied Data Science candidate at Syracuse University — graduating May 2026, GPA 3.7 — with a <strong>13+ year career in software &amp; data engineering</strong>. I've shipped production ML models at a global bank, built healthcare analytics pipelines, and I know how to turn messy data into decisions that matter.
+      M.S. Applied Data Science candidate at Syracuse University, graduating May 2026, GPA 3.7, with a <strong>13+ year career in software &amp; data engineering</strong>. I've shipped production ML models at a global bank, built healthcare analytics dashboards, and I know how to turn messy data into decisions that matter.
     </p>
     <div class="hero-badges">
-      <span class="badge badge-teal">Machine Learning</span>
+      <span class="badge badge-pink">Machine Learning</span>
       <span class="badge badge-orange">Data Engineering · ETL</span>
       <span class="badge badge-purple">Python · SQL · R</span>
       <span class="badge badge-amber">Tableau · Power BI</span>
@@ -254,8 +257,8 @@
   <h2 class="section-title">Engineer turned<br>Data Scientist.</h2>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>I spent 13+ years building software systems — ETL pipelines, APIs, integrations — for major companies across Brazil and the US. Along the way, I kept drifting toward the data side of every project. Eventually, I made it official.</p>
-      <p>My <strong>Master's in Applied Data Science at Syracuse University</strong> (graduating May 2026, GPA 3.7) gave me rigorous ML and statistical foundations. My engineering background gives me something rarer: I can actually <strong>build and deploy</strong> what I design — not just notebooks, but production-ready systems.</p>
+      <p>I spent 13+ years building software systems, ETL pipelines, APIs, integrations, for major companies across Brazil and the US. Along the way, I kept drifting toward the data side of every project. Eventually, I made it official.</p>
+      <p>My <strong>Master's in Applied Data Science at Syracuse University</strong> (graduating May 2026, GPA 3.7) gave me rigorous ML and statistical foundations. My engineering background gives me something rarer: I can actually <strong>build and deploy</strong> what I design, not just notebooks, but production-ready systems.</p>
       <p>I've analyzed 170,000+ healthcare records at GovSphere, led the development of the first ML model in Latin America to receive regulatory approval at Bank of America, and connected 10+ vendor systems with zero post-production errors.</p>
       <div class="highlight-box">
         <p>🌎 Originally from Pará, Brazil &nbsp;·&nbsp; <span>Bilingual</span>: English &amp; Portuguese &nbsp;·&nbsp; Based in Syracuse, NY &nbsp;·&nbsp; <span>Open to relocation</span></p>
@@ -267,7 +270,7 @@
         <div class="avatar-caption">
           <div class="avatar-dot"></div>
           <div class="avatar-caption-text">
-            AI-generated — because even my headshot uses machine learning ☕
+            Brains, models, and a little bit of pink.
           </div>
         </div>
       </div>
@@ -368,9 +371,9 @@
       </div>
       <div class="skill-card reveal">
         <div class="skill-card-icon">🌎</div>
-        <div class="skill-card-title">Domains &amp; Languages</div>
+        <div class="skill-card-title">Industries &amp; Domains</div>
         <div class="skill-tags">
-          <span class="skill-tag tag-orange">Healthcare Analytics</span><span class="skill-tag tag-orange">Financial Data</span><span class="skill-tag tag-purple">Regulatory Compliance</span><span class="skill-tag tag-sky">Telecom</span>
+          <span class="skill-tag tag-orange">Healthcare</span><span class="skill-tag tag-orange">Finance &amp; Banking</span><span class="skill-tag tag-purple">Government</span><span class="skill-tag tag-sky">Telecom</span><span class="skill-tag tag-amber">Insurance</span><span class="skill-tag tag-purple">Regulatory Compliance</span>
         </div>
       </div>
     </div>
@@ -382,26 +385,31 @@
   <div class="section-inner">
   <div class="section-label">Portfolio</div>
   <h2 class="section-title">Selected Projects.</h2>
-  <p style="color:var(--muted);margin-bottom:2.5rem;font-family:var(--font-mono);font-size:0.78rem;letter-spacing:0.04em;">
-    ✏️ REPLACE placeholders below with your 3 real project descriptions
-  </p>
+
   <div class="projects-grid">
     <div class="project-card featured reveal">
       <div class="project-header">
         <div class="project-accent" style="background:var(--accent1);"></div>
         <div class="project-num">01 / Featured Project</div>
-        <div class="project-title">Your Featured Project Title Here</div>
+        <div class="project-title">What Skills Does Your Region Actually Want? A Big Data Analysis of the U.S. Data Job Market</div>
       </div>
       <div class="project-body">
-        <p class="project-desc">[Describe your most impressive project in 2–3 sentences. What problem did you solve? What data did you use? What was the impact? Keep it accessible for a non-expert audience.]</p>
-        <div class="project-outcome">✦ Key result: [e.g., "Reduced prediction error by 23% vs. baseline model"]</div>
+        <p class="project-desc">Which data skills are most in demand — and does the answer change depending on where you live? I collected 3,900 real job postings across 335 U.S. cities using the JSearch API, built a full cloud pipeline with PySpark and Snowflake using a Bronze, Silver, Gold architecture, and applied NLP to extract technical skills from job descriptions. The result is a regional skills map showing that Tableau dominates the West, Power BI leads the South and Midwest, and California, Texas, and New York each have a different most-wanted data role.</p>
+        <div class="project-outcome">✦ 3,900 job postings · 335 cities · 23 states · Full ETL pipeline from API to Tableau dashboards</div>
         <div class="project-tags">
-          <span class="skill-tag tag-orange">Python</span><span class="skill-tag tag-teal">Machine Learning</span><span class="skill-tag tag-purple">Pandas</span><span class="skill-tag tag-sky">Your Tools</span>
+          <span class="skill-tag tag-orange">Python</span>
+          <span class="skill-tag tag-orange">PySpark</span>
+          <span class="skill-tag tag-teal">Snowflake</span>
+          <span class="skill-tag tag-teal">Tableau</span>
+          <span class="skill-tag tag-purple">NLP</span>
+          <span class="skill-tag tag-purple">ETL Pipeline</span>
+          <span class="skill-tag tag-sky">JSearch API</span>
+          <span class="skill-tag tag-amber">Big Data</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link">GitHub →</a>
-          <a href="#" class="project-link">Live Demo →</a>
-          <a href="#" class="project-link">Report →</a>
+          <a href="https://github.com/alicegalvaov/job-listings-bigdata" target="_blank" class="project-link">GitHub →</a>
+          <a href="#" class="project-link">Live Dashboard →</a>
+          <a href="project1.html" class="project-link">Read More →</a>
         </div>
       </div>
     </div>
@@ -409,16 +417,20 @@
       <div class="project-header">
         <div class="project-accent" style="background:var(--accent2);"></div>
         <div class="project-num">02</div>
-        <div class="project-title">Second Project Title Here</div>
+        <div class="project-title">Airbnb Profit Maximization Using an Occupancy Rate Regressor</div>
       </div>
       <div class="project-body">
-        <p class="project-desc">[2–3 sentences. What techniques? What did you discover or build?]</p>
-        <div class="project-outcome">✦ Key result: [e.g., "Dashboard adopted by 3 departments"]</div>
+        <p class="project-desc">Can machine learning tell an Airbnb host what price maximizes their yearly profit? We built a deep neural network to predict occupancy rate from 98,000+ listings across Los Angeles, Austin, and New York City, then used that model to sweep a price range and find the profit-maximizing price for any given listing.</p>
+        <div class="project-outcome">✦ Neural network R² of 0.46 · Optimization curve identifying price that projected $77,992 max yearly profit</div>
         <div class="project-tags">
-          <span class="skill-tag tag-teal">SQL</span><span class="skill-tag tag-orange">Tableau</span><span class="skill-tag tag-amber">Your Tools</span>
+          <span class="skill-tag tag-teal">TensorFlow</span>
+          <span class="skill-tag tag-orange">Python</span>
+          <span class="skill-tag tag-purple">Scikit-learn</span>
+          <span class="skill-tag tag-amber">Price Optimization</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link">GitHub →</a><a href="#" class="project-link">Report →</a>
+          <a href="https://github.com/alicegalvaov" target="_blank" class="project-link">GitHub →</a>
+          <a href="project2.html" class="project-link">Read More →</a>
         </div>
       </div>
     </div>
@@ -429,7 +441,7 @@
         <div class="project-title">Third Project Title Here</div>
       </div>
       <div class="project-body">
-        <p class="project-desc">[2–3 sentences. Try to vary the type — e.g., if #1 is ML, make this NLP or analytics.]</p>
+        <p class="project-desc">[2–3 sentences. Try to vary the type, e.g., if #1 is ML, make this NLP or analytics.]</p>
         <div class="project-outcome">✦ Key result: [e.g., "Achieved 91% classification accuracy"]</div>
         <div class="project-tags">
           <span class="skill-tag tag-purple">NLP</span><span class="skill-tag tag-sky">PySpark</span><span class="skill-tag tag-teal">Your Tools</span>
@@ -518,7 +530,7 @@
     <div class="blog-meta">Reflective Essay · ~3,000 words · May 2026</div>
     <div class="blog-title">From the Amazon to New York: Reflections on My Applied Data Science Journey</div>
     <div class="blog-excerpt">
-      <p>I came into this program already knowing how to build things. What I didn't know was how to ask the right questions of the data those systems produced. This is my reflection on what changed — and what surprised me — over the past two years...</p>
+      <p>I came into this program already knowing how to build things. What I didn't know was how to ask the right questions of the data those systems produced. This is my reflection on what changed, and what surprised me, over the past two years...</p>
     </div>
     <div class="blog-topics">
       <span class="skill-tag tag-teal">What I expected to learn</span>
@@ -540,7 +552,7 @@
   <div class="video-placeholder">
     <!-- Replace with: <iframe width="100%" height="420" src="https://www.youtube.com/embed/YOUR_ID" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe> -->
     <div class="play-btn">▶</div>
-    <p style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;position:relative;z-index:1;">Presentation Video — Coming Soon</p>
+    <p style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;margin-bottom:0.5rem;position:relative;z-index:1;">Presentation Video, Coming Soon</p>
     <p style="font-family:var(--font-mono);font-size:0.75rem;color:var(--muted);position:relative;z-index:1;">Replace this block with a YouTube or Vimeo embed</p>
   </div>
   </div>
@@ -551,11 +563,11 @@
   <div class="inner">
     <div class="section-label">Let's connect</div>
     <h2 class="section-title">Open to<br>Opportunities.</h2>
-    <p style="color:var(--muted);font-size:1.05rem;max-width:480px;margin:0 auto;">Actively seeking Data Scientist and Data Analyst roles. I bring 13+ years of engineering depth to every data problem — let's talk.</p>
+    <p style="color:var(--muted);font-size:1.05rem;max-width:480px;margin:0 auto;">Actively seeking Data Scientist and Data Analyst roles. I bring 13+ years of engineering depth to every data problem, let's talk.</p>
     <div class="contact-links">
       <a href="/cdn-cgi/l/email-protection#badbd6d3d9dfdddbd6ccdbd5ccfaddd7dbd3d694d9d5d7" class="contact-link">✉ Email</a>
       <a href="https://linkedin.com/in/alicegvieira/" target="_blank" class="contact-link">in LinkedIn</a>
-      <a href="https://github.com/" target="_blank" class="contact-link">⌥ GitHub</a>
+      <a href="https://github.com/alicegalvaov" target="_blank" class="contact-link">⌥ GitHub</a>
       <a href="resume.pdf" class="contact-link">↓ Resume</a>
     </div>
   </div>
