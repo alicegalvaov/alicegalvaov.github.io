@@ -69,12 +69,12 @@
   .btn-primary:hover { background: #ff8555; transform: translateY(-2px); }
   .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
   .btn-outline:hover { border-color: var(--accent-pink); color: var(--accent-pink); transform: translateY(-2px); }
-  .hero-stats { display: flex; gap: 2.5rem; margin-top: 4.5rem; padding-top: 3rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
-  .stat-num { font-family: var(--font-display); font-size: 2.2rem; font-weight: 800; }
+  .hero-stats { display: flex; gap: 2.5rem; margin-top: 2.5rem; padding-top: 2rem; border-top: 1px solid var(--border); flex-wrap: wrap; }
+  .stat-num { font-family: var(--font-display); font-size: 3.5rem; font-weight: 800; line-height: 1; }
   .stat-num span { color: var(--accent1); }
   .stat-label { font-family: var(--font-mono); font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; max-width: 120px; line-height: 1.4; }
 
-  .section-inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; } #about { background: var(--bg); }
+  .section-inner { max-width: 1200px; margin: 0 auto; padding: 3rem 4rem; } #about { background: var(--bg); }
   .section-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-pink); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; }
   .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
   .section-title { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 800; letter-spacing: -0.03em; margin-bottom: 3rem; line-height: 1.1; }
@@ -107,7 +107,7 @@
   .timeline-company { font-size: 0.88rem; color: var(--muted); }
 
   #skills { background: var(--surface); }
-  #skills .inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; }
+  #skills .inner { max-width: 1200px; margin: 0 auto; padding: 3rem 4rem; }
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem; }
   .skill-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.6rem; transition: border-color 0.3s, transform 0.3s; }
   .skill-card:hover { border-color: var(--accent-pink); transform: translateY(-4px); }
@@ -123,10 +123,10 @@
   .tag-pink   { background: rgba(233,30,140,0.10);  color: var(--accent-pink); }
 
   #projects { background: var(--bg); }
-  .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+  .projects-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
   .project-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: border-color 0.3s, transform 0.3s; display: flex; flex-direction: column; }
   .project-card:hover { border-color: var(--accent-pink); transform: translateY(-5px); }
-  .project-card.featured { grid-column: span 2; }
+  .project-card.featured { grid-column: span 1; }
   .project-header { padding: 2rem 2rem 0; position: relative; }
   .project-accent { position: absolute; top: 0; right: 2rem; width: 60px; height: 4px; border-radius: 0 0 4px 4px; }
   .project-num { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); margin-bottom: 0.6rem; }
@@ -140,7 +140,7 @@
   .project-link:hover { color: var(--accent-pink); border-color: var(--accent-pink); }
 
   #experience { background: var(--surface); }
-  #experience .inner { max-width: 1200px; margin: 0 auto; padding: 7rem 4rem; }
+  #experience .inner { max-width: 1200px; margin: 0 auto; padding: 3rem 4rem; }
   .exp-list { display: flex; flex-direction: column; gap: 1.25rem; }
   .exp-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1.75rem 2rem; transition: border-color 0.3s; }
   .exp-card:hover { border-color: var(--accent-pink); }
@@ -153,8 +153,8 @@
   .exp-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--accent3); font-weight: 700; }
   .exp-bullets li strong { color: var(--text); }
 
-  #blog { background: var(--bg); }
-  .blog-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 3rem; max-width: 800px; }
+  #blog { background: var(--surface); }
+  .blog-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 3rem; max-width: 100%; }
   .blog-meta { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent4); letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 1.25rem; }
   .blog-title { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; margin-bottom: 1.25rem; line-height: 1.25; }
   .blog-excerpt { color: var(--muted); margin-bottom: 2rem; font-size: 1rem; line-height: 1.85; }
@@ -167,9 +167,9 @@
   .play-btn:hover { transform: scale(1.1); background: #ff8555; }
 
   #contact { background: var(--surface); }
-  #contact .inner { max-width: 700px; margin: 0 auto; padding: 7rem 4rem; text-align: center; }
-  .contact-links { display: flex; justify-content: center; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
-  .contact-link { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.05em; text-transform: uppercase; padding: 0.85rem 1.5rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; display: flex; align-items: center; gap: 0.5rem; }
+  #contact .inner { max-width: 700px; margin: 0 auto; padding: 3rem 4rem; text-align: center; }
+  .contact-links { display: flex; justify-content: center; gap: 0.75rem; margin-top: 2rem; flex-wrap: nowrap; }
+  .contact-link { font-family: var(--font-mono); font-size: 0.72rem; letter-spacing: 0.04em; text-transform: uppercase; padding: 0.8rem 1.25rem; border: 1px solid var(--border); border-radius: 4px; transition: all 0.2s; display: flex; align-items: center; gap: 0.4rem; white-space: nowrap; }
   .contact-link:hover { border-color: var(--accent-pink); color: var(--accent-pink); transform: translateY(-2px); }
 
   footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; position: relative; z-index: 1; }
@@ -254,7 +254,7 @@
 <section id="about">
   <div class="section-inner">
   <div class="section-label">About me</div>
-  <h2 class="section-title">Engineer turned<br>Data Scientist.</h2>
+  <h2 class="section-title">Engineer turned<br>Data Scientist</h2>
   <div class="about-grid">
     <div class="about-text reveal">
       <p>I spent 13+ years building software systems, ETL pipelines, APIs, integrations, for major companies across Brazil and the US. Along the way, I kept drifting toward the data side of every project. Eventually, I made it official.</p>
@@ -332,7 +332,7 @@
 <section id="skills">
   <div class="inner">
     <div class="section-label">What I work with</div>
-    <h2 class="section-title">Skills &amp; Tools.</h2>
+    <h2 class="section-title">Skills &amp; Tools</h2>
     <div class="skills-grid">
       <div class="skill-card reveal">
         <div class="skill-card-icon">📊</div>
@@ -384,7 +384,7 @@
 <section id="projects">
   <div class="section-inner">
   <div class="section-label">Portfolio</div>
-  <h2 class="section-title">Selected Projects.</h2>
+  <h2 class="section-title">Selected Projects</h2>
 
   <div class="projects-grid">
     <div class="project-card featured reveal">
@@ -438,16 +438,21 @@
       <div class="project-header">
         <div class="project-accent" style="background:var(--accent3);"></div>
         <div class="project-num">03</div>
-        <div class="project-title">Third Project Title Here</div>
+        <div class="project-title">Crime x Sports: Does Your Team's Performance Affect Local Crime Rates?</div>
       </div>
       <div class="project-body">
-        <p class="project-desc">[2–3 sentences. Try to vary the type, e.g., if #1 is ML, make this NLP or analytics.]</p>
-        <div class="project-outcome">✦ Key result: [e.g., "Achieved 91% classification accuracy"]</div>
+        <p class="project-desc">A data visualization project exploring whether NFL, NBA, MLB, and NHL game results affect local crime patterns. Built 5 interactive Tableau dashboards combining FBI crime data with sports performance data across 50+ U.S. cities, comparing crime rates on game days vs non-game days, broken down by win and loss.</p>
+        <div class="project-outcome">✦ 5 Tableau dashboards · 4 data sources · 4 major leagues · GameDay vs Non-GameDay crime analysis</div>
         <div class="project-tags">
-          <span class="skill-tag tag-purple">NLP</span><span class="skill-tag tag-sky">PySpark</span><span class="skill-tag tag-teal">Your Tools</span>
+          <span class="skill-tag tag-teal">Tableau</span>
+          <span class="skill-tag tag-purple">Dashboard Design</span>
+          <span class="skill-tag tag-orange">FBI Crime Data</span>
+          <span class="skill-tag tag-sky">Geospatial Mapping</span>
         </div>
         <div class="project-links">
-          <a href="#" class="project-link">GitHub →</a><a href="#" class="project-link">Demo →</a>
+          <a href="https://github.com/alicegalvaov" target="_blank" class="project-link">GitHub →</a>
+          <a href="#" class="project-link">Live Dashboard →</a>
+          <a href="project3.html" class="project-link">Read More →</a>
         </div>
       </div>
     </div>
@@ -459,7 +464,7 @@
 <section id="experience">
   <div class="inner">
     <div class="section-label">Work history</div>
-    <h2 class="section-title">Experience.</h2>
+    <h2 class="section-title">Experience</h2>
     <div class="exp-list">
       <div class="exp-card reveal">
         <div class="exp-header">
@@ -525,7 +530,7 @@
 <section id="blog">
   <div class="section-inner">
   <div class="section-label">Reflection</div>
-  <h2 class="section-title">My Journey.</h2>
+  <h2 class="section-title">My Journey</h2>
   <div class="blog-card reveal">
     <div class="blog-meta">Reflective Essay · ~3,000 words · May 2026</div>
     <div class="blog-title">From the Amazon to New York: Reflections on My Applied Data Science Journey</div>
@@ -547,7 +552,7 @@
 <section id="video">
   <div class="section-inner" style="max-width:900px;">
   <div class="section-label">Presentation</div>
-  <h2 class="section-title">Watch My Story.</h2>
+  <h2 class="section-title">Watch My Story</h2>
   <p style="color:var(--muted);max-width:520px;margin:0 auto 1rem;text-align:center;">A 1–2 minute summary of what I learned in the program and where I'm headed next.</p>
   <div class="video-placeholder">
     <!-- Replace with: <iframe width="100%" height="420" src="https://www.youtube.com/embed/YOUR_ID" frameborder="0" allowfullscreen style="border-radius:8px;"></iframe> -->
@@ -562,13 +567,13 @@
 <section id="contact">
   <div class="inner">
     <div class="section-label">Let's connect</div>
-    <h2 class="section-title">Open to<br>Opportunities.</h2>
+    <h2 class="section-title">Open to<br>Opportunities</h2>
     <p style="color:var(--muted);font-size:1.05rem;max-width:480px;margin:0 auto;">Actively seeking Data Scientist and Data Analyst roles. I bring 13+ years of engineering depth to every data problem, let's talk.</p>
     <div class="contact-links">
-      <a href="/cdn-cgi/l/email-protection#badbd6d3d9dfdddbd6ccdbd5ccfaddd7dbd3d694d9d5d7" class="contact-link">✉ Email</a>
+      <span class="contact-link" style="cursor:default; user-select:all;">✉ alicegalvaov@gmail.com</span>
       <a href="https://linkedin.com/in/alicegvieira/" target="_blank" class="contact-link">in LinkedIn</a>
       <a href="https://github.com/alicegalvaov" target="_blank" class="contact-link">⌥ GitHub</a>
-      <a href="resume.pdf" class="contact-link">↓ Resume</a>
+      <a href="AliceGalvaoVieira.pdf" class="contact-link">↓ Resume</a>
     </div>
   </div>
 </section>
