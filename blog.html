@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From the Amazon to New York — Alice Galvao Vieira</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --card: #1a1a24;
+    --border: rgba(255,255,255,0.07);
+    --text: #f0eff8;
+    --muted: #888799;
+    --accent1: #ff6b35;
+    --accent2: #00e5b3;
+    --accent3: #a78bfa;
+    --accent4: #f59e0b;
+    --accent5: #38bdf8;
+    --accent-pink: #e91e8c;
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: var(--font-body); font-size: 17px; line-height: 1.85; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1.25rem 4rem;
+    backdrop-filter: blur(20px);
+    background: rgba(10,10,15,0.75);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: var(--font-display); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.02em; }
+  .nav-logo span { color: var(--accent-pink); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--accent-pink); }
+
+  .page-wrap { max-width: 740px; margin: 0 auto; padding: 8rem 4rem 6rem; }
+
+  .back-link { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); display: inline-flex; align-items: center; gap: 0.5rem; margin-bottom: 3rem; transition: color 0.2s; }
+  .back-link:hover { color: var(--accent-pink); }
+
+  .post-label { font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-pink); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+  h1 { font-family: var(--font-display); font-size: clamp(2rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1.5rem; }
+  .post-meta { font-family: var(--font-mono); font-size: 0.75rem; color: var(--muted); margin-bottom: 3rem; padding-bottom: 3rem; border-bottom: 1px solid var(--border); }
+
+  h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin: 3rem 0 1.25rem; color: var(--text); line-height: 1.2; }
+  h3 { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; margin: 2rem 0 0.75rem; color: var(--accent4); }
+
+  p { color: var(--muted); margin-bottom: 1.4rem; font-size: 1.05rem; line-height: 1.9; }
+  p strong { color: var(--text); }
+
+  blockquote { border-left: 3px solid var(--accent-pink); padding: 0.5rem 0 0.5rem 1.5rem; margin: 2rem 0; }
+  blockquote p { font-size: 1.1rem; color: var(--text); font-style: italic; margin: 0; }
+
+  .btn-row { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--border); }
+  .btn { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 0.9rem 2rem; border-radius: 4px; transition: all 0.2s; display: inline-block; }
+  .btn-outline { background: transparent; color: var(--text); border: 1px solid var(--border); }
+  .btn-outline:hover { border-color: var(--accent-pink); color: var(--accent-pink); transform: translateY(-2px); }
+
+  footer { padding: 2rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  footer p { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); }
+
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .page-wrap { padding: 6rem 1.5rem 4rem; }
+    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">ALICE<span>.</span>DATA</a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#skills">Skills</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#experience">Experience</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+
+  <a href="index.html#blog" class="back-link">← Back</a>
+
+  <div class="post-label">Reflective Essay · M.S. Applied Data Science</div>
+  <h1>From the Amazon to New York: Reflections on My Applied Data Science Journey</h1>
+  <div class="post-meta">Alice Galvao Vieira · May 2026 · Syracuse University · iSchool</div>
+
+  <h2>Where I Came From</h2>
+
+  <p>I grew up in Castanhal, a city in the state of Pará, deep in the Brazilian Amazon. My parents are from smaller towns nearby, and many of my childhood weekends were spent visiting my grandmother in a house made of barro, surrounded by trees and small rivers. She did not have potable water for a good portion of my childhood. I remember walking to the river to take showers, wash clothes, and collect drinking water from the section of the river set aside for that purpose. I remember the stories too, about the creatures that lived in the forest and in the water, the warnings, the legends that made the Amazon feel like a living thing with intentions of its own. It shaped how I see the world.</p>
+
+  <p>Back home in Castanhal, life was different. My father had a car, we had a television, and one day when I was about eight or nine years old, he brought home a computer. This was around 1998, and it was a rare thing to have. I fell in love with it immediately. I opened every program I could find. I did not understand what Excel was for but I played with the cells anyway. I played games. Something about that machine captured my attention in a way nothing else had.</p>
+
+  <p>My father was a remarkable person. He grew up in a very poor family, the son of a man who could not read. Through education, he graduated, built a career, and gave his children a different life. He understood what education could do for a person and he made sure we understood it too. He put my brother and me in a private English school alongside our regular school. At the time that made no sense to me. Nobody around us was speaking English. But he saw what we could not yet see: that language would open doors we had not even imagined. He was right.</p>
+
+  <p>I spent my childhood outdoors, playing soccer in the streets, climbing trees for fruit, catching fish and shrimp in the river with my bare hands, reading every book my father brought home. I wanted to be a veterinarian. But the day came to choose a university course, and the entrance exam for veterinary medicine fell on the same day as computer engineering. I chose engineering, partly because I loved math and partly because of that computer that had never stopped fascinating me. I never regretted it.</p>
+
+  <h2>Thirteen Years, One Question</h2>
+
+  <p>I started working as a system analyst intern in my second year of university and never really stopped. I worked my way through software engineering roles across multiple companies in Brazil, eventually reaching Senior Software Engineer and Assistant Vice President at Bank of America in São Paulo. I built APIs, ETL pipelines, and integrations. I worked with databases, managed teams, and coordinated cross-functional projects with global teams.</p>
+
+  <p>But throughout all of those years, I kept asking myself the same question: where do I actually belong? I was never content just writing code. I found myself in the business analyst meetings, asking questions I was not supposed to be asking. I was debating with the database administrators about design decisions. I was always the person who wanted to understand the full picture, from the business problem to the data to the system to the user. Not every company had a place for that.</p>
+
+  <p>Then I learned about data science. For the first time, I saw a field that matched the way my brain had always worked. It sits at the intersection of business understanding, data engineering, and analytical thinking. It requires you to ask the right questions, collect and prepare the data, build and validate models, and communicate the results in a way that non-technical people can act on. That was not just a job description. That was a description of what I had been doing informally for thirteen years.</p>
+
+  <p>I completed a postgraduate course in Big Data Analysis in Brazil in 2019, intending to make the pivot. Then the pandemic hit, and leaving a stable position felt irresponsible. So I stayed. And then something unexpected happened. My manager at Bank of America wanted to introduce machine learning to our team. The people he hired with ML expertise left. I ended up being the person who had to finish building the models, put them into production, and take them through a rigorous regulatory validation process. We became <strong>the first team in Latin America to have a machine learning model receive regulatory approval at Bank of America.</strong> That experience confirmed everything. I applied to the Master of Applied Data Science program at Syracuse University shortly after.</p>
+
+  <h2>What I Expected to Learn</h2>
+
+  <p>I came to Syracuse with a specific gap to fill: statistics. I had the technical side covered. I knew how to code, design databases, build and deploy systems, and work with machine learning models in production. But the mathematical and statistical foundations underneath all of that, I had learned by doing, not by understanding. I wanted to understand.</p>
+
+  <p>Visualization was the other area I was genuinely excited about. In all my years as a software engineer, I had never built a dashboard. I knew it was one of the most important skills a data scientist could have, because the work only matters if you can communicate it clearly to people who are not data scientists. I am also a creative person, and the idea of designing something that is both analytically rigorous and visually clear appealed to me.</p>
+
+  <p>What I did not expect was how different the American graduate school experience would feel. In Brazil, the professor explains everything during class. Here, I was expected to read before class, come prepared, and treat the classroom as a place to deepen understanding rather than receive it. That was a significant adjustment. But it was also a better way to learn. It made me a more active, self-directed student, and I carry that habit with me now.</p>
+
+  <h2>What I Learned</h2>
+
+  <h3>Statistics and Quantitative Reasoning</h3>
+
+  <p>This was the hardest part of the program for me, and also the most necessary. Concepts like Bayesian hypothesis testing and ANOVA pushed me into genuinely uncomfortable territory. I will not pretend I mastered everything. But I came in with almost no formal statistics background and I left with the ability to reason clearly about sampling, correlation, descriptive statistics, and the conditions under which statistical tests can and cannot be trusted. That shift from knowing a tool to understanding the reasoning behind it is what the program gave me here.</p>
+
+  <h3>Machine Learning</h3>
+
+  <p>I came in already familiar with some machine learning methods from my postgraduate work and my time at Bank of America. The program added a layer I had been missing: structure. The most important thing I learned was how to build a clean, reproducible model development pipeline. Proper exploratory data analysis first. Systematic data cleaning and transformation. Reusable pipelines that eliminate redundant code. Every decision documented. When I was working with ML at Bank of America, a Microsoft library had abstracted away much of this. The program made me build it from scratch, and that made me understand what was actually happening underneath.</p>
+
+  <h3>Data Management and Engineering</h3>
+
+  <p>My favorite class in the entire program was Data Warehousing. I have been working with relational databases since 2008. For almost two decades I thought about data storage one way: normalize everything, eliminate redundancy, use joins and views to get what you need. The Data Warehousing class completely shifted that mindset. Star schemas, fact and dimension tables, the bronze, silver, and gold layers of a modern data pipeline. A completely different philosophy built around a different question: not how do we store data efficiently, but how do we structure data so that analysts can get what they need quickly, even if that means storing some information more than once. When I later worked at GovSphere with a relational database trying to support complex analytical queries, I understood exactly why data warehousing exists. The lesson landed because I had already felt the pain it solves.</p>
+
+  <h3>Visualization and Communication</h3>
+
+  <p>I went into the visualization course expecting it to be the fun, creative part. It was, but it was also harder than I anticipated. Tableau is a deep tool. The specific calculations, the conditional formatting, the aggregations and filters, the decision about which chart type communicates which kind of information clearly, none of that is simple. I learned that visualization is not decoration. It is a discipline. Choosing between a bar chart and a bubble chart, deciding how many categories to show before the visual becomes unreadable, thinking about how someone unfamiliar with data will read your dashboard, these are real design decisions with real consequences. The core lesson: you have a limited amount of space and a limited amount of your audience's attention. Use both wisely.</p>
+
+  <h3>Data Collection and Storage</h3>
+
+  <p>The program pushed me to go deeper with tools I had touched before and build with new ones from end to end. I had worked with APIs and cloud storage in my engineering career, but distributed processing with PySpark and modern data warehouse architecture with Snowflake were genuinely new. My Big Data class project brought all of this together in a single pipeline, and having to design and build every layer myself gave me a practical understanding that prior experience alone could not have provided.</p>
+
+  <h3>Ethics in Data Science</h3>
+
+  <p>I did not take the dedicated ethics course, but ethics found me anyway. At GovSphere, I worked with 170,000 patient records containing sensitive health information. Every query, every dashboard decision, every choice about what data to expose and to whom, involved an ethical judgment. At Bank of America, the entire regulatory process around our ML model was fundamentally an ethics exercise: proving the model was fair, transparent, and accountable before it could influence decisions affecting real people. And at United AI, I gave a presentation about the gap between rooms discussing AI consciousness and communities still without reliable internet access. Ethics in data science is not an abstract concept you study. It is a practical question you answer every single time you decide what to do with someone else's data.</p>
+
+  <h2>Three Projects That Shaped My Thinking</h2>
+
+  <h3>What Skills Does Your Region Actually Want?</h3>
+
+  <p>For my Big Data class, I built an end-to-end pipeline to analyze 3,900 real job postings across 335 U.S. cities. The data came from the JSearch API, was processed with PySpark, stored in Snowflake using a bronze, silver, and gold architecture, and visualized in Tableau dashboards. Every part of that sentence represents a real decision and a real challenge. How do you make API calls efficiently with limited quota? Which cities do you include to represent each region fairly? When you are text mining job descriptions, which words count as a skill and which are just filler?</p>
+
+  <p>What surprised me in the findings was that regional differences in tool preferences are real and meaningful. The West leans toward Tableau, the South and Midwest toward Power BI. California produces the most Data Scientist demand, Texas the most Data Engineer demand, and New York the most Data Analyst demand. As someone job hunting while building this project, I had noticed that companies seemed to ask for everything from everyone. The data showed that at scale, the roles are genuinely differentiated. That was clarifying to see.</p>
+
+  <h3>Airbnb Profit Maximization</h3>
+
+  <p>For my Machine Learning class, our team built a system to predict Airbnb occupancy rates and use those predictions to find the price that would maximize a host's yearly profit. I was responsible for data collection, cleaning, transformations, exploratory data analysis, feature selection, and running models with different configurations to improve performance. We analyzed 98,000 listings across three cities.</p>
+
+  <p>Our best model achieved an R² of 0.46. That is decent but not great. We tried many approaches, many feature transformations, many configurations. The honest truth is that the data we had was a proxy, reviews used to estimate occupancy, and the real booking data we needed was not publicly available from Airbnb. We requested it and never heard back. That experience taught me something I now consider one of the most important lessons of the program: in the real world, the data you need is often not the data you can access. The skill is learning to work honestly with imperfect data, be transparent about its limitations, and still generate something useful.</p>
+
+  <h3>Crime x Sports</h3>
+
+  <p>For my Data Visualization class, our team explored whether professional sports results affect local crime rates. I was responsible for all the crime data, manually downloading files from the FBI Crime Data Explorer across multiple years and crime categories, then writing Python scripts to combine, clean, and transform everything into a format that could be joined with the sports data. The crime data was hourly. The sports data was by day. Getting those two datasets aligned required significant engineering before any analysis could begin. I also built all the dashboards related to the crime dataset and half of those connecting crime to sports performance.</p>
+
+  <p>Did we find a clear answer? Not exactly. We found some signal, larceny increasing slightly on game days in some cities, possibly because larger crowds create more opportunity. But a clean causal relationship was hard to establish. We had covered four major leagues, five years, and dozens of cities. We had embraced the whole world and ended up with too much noise to hear a clear signal. The lesson was important: more data is not always better. A focused question answered with precise, carefully chosen data is often more valuable than an ambitious question answered with everything available.</p>
+
+  <h2>Beyond the Classroom</h2>
+
+  <p>My internship at GovSphere was where classroom knowledge met reality, and reality won the first round. I worked with 170,000 patient records in a relational database, not a data warehouse, building Tableau dashboards that compared patient outcomes across multiple years. The SQL queries I had to write were some of the hardest I have ever written. Grouping data per patient, tracking results over time, running complex comparisons across years, all of it on the same live database that other users were actively accessing. I had to be creative. I had to think about performance constantly. I could not build the architecture I would have chosen. I had to work with what existed.</p>
+
+  <p>That experience confirmed something I had heard many times but never fully believed until I lived it: data scientists spend far more time cleaning and preparing data than generating insights. In a classroom project, you can structure everything from the start. In a real company, you inherit the decisions that were made before you arrived.</p>
+
+  <p>At Syracuse, I also joined United AI, the university's first AI student organization, as a project coordinator and the oldest member of the executive board. I joined because I believe you can only have a voice in conversations you are present for. These were mostly undergraduate students, many with no technical background at all, building functioning apps and websites using AI tools in four weeks. Things that I know from experience take months of professional engineering work. Watching it happen was genuinely mind-shifting. The barrier between having an idea and being able to build it is collapsing.</p>
+
+  <p>The moment that has stayed with me most was a presentation I gave about AI and inequality. I asked the room to think about the distance between our conversation and the reality of a student in my home region of Pará, where some communities still do not have reliable potable water, where a high school principal had to physically travel to a student's home to tell her she had been accepted to university because the student had no internet access. We were sitting in a room discussing AI consciousness and the future rights of machines. And somewhere in the world, a girl close to the age of the people in that room had never loaded a webpage.</p>
+
+  <blockquote>
+    <p>AI is only as good as the intention of the person behind it. If we want to use it to do good, we can. But we need to make sure we are not building a future that leaves behind the people who already have the least.</p>
+  </blockquote>
+
+  <p>That conversation led to a workshop where students thought about how to use AI to address real human problems: hunger, access to education, corruption. It was one of the best discussions I have been part of in this entire program.</p>
+
+  <h2>The Best Part and the Biggest Surprises</h2>
+
+  <p>The best part of this program was the integration. I came in with skills that had always existed in separate boxes: engineering here, data there, business understanding somewhere else. The program gave me a framework that made them a single coherent thing. I am not an engineer who learned some data science. I am a data scientist with an engineering foundation, and that is a meaningful difference.</p>
+
+  <p>The Data Warehousing class was one of the most satisfying of the program. After so many years thinking about data storage through a relational lens, it was genuinely refreshing to encounter a completely different philosophy built around different goals. That kind of mind shift is hard to manufacture and I was not expecting it from a course I thought would feel familiar.</p>
+
+  <p>What I did not expect was how much the students at United AI would inspire me. After years in corporate environments, you can lose some of your spark. The weight of deadlines, responsibilities, and the pace of professional life has a way of quietly dimming the excitement that brought you to the field in the first place. Being around these students, watching their energy, their urgency, their genuine belief that they could shape the future, reminded me of how I felt when I was starting out. I have always believed that you can learn something from everyone around you. I went in as a mentor and came out inspired. That is not a surprise in principle, because I know people teach each other in all directions. But the depth of it was something I did not anticipate.</p>
+
+  <h2>Where I Am Going</h2>
+
+  <p>I am looking for roles where I can be a data scientist who actually ships things. Not just notebooks. Not just reports. Analyses that connect to real decisions, pipelines that run reliably, dashboards that non-technical people can use to do their jobs better. My engineering background means I know what it takes to move from prototype to production. My data science training means I know how to ask the right questions before building anything.</p>
+
+  <p>I grew up in a place where a computer was a rare and magical thing. I fell in love with it anyway, and that love eventually brought me here: to a master's degree in applied data science, to an internship analyzing patient health outcomes, to a room full of students reimagining what AI could do for people who have been left out of the conversation entirely.</p>
+
+  <p>I do not take any of that for granted. And I intend to make it count.</p>
+
+  <div class="btn-row">
+    <a href="index.html#contact" class="btn btn-outline">Get in Touch</a>
+    <a href="index.html#projects" class="btn btn-outline">View Projects</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Alice Galvao Vieira</p>
+  <p>M.S. Applied Data Science · Syracuse University · iSchool</p>
+</footer>
+
+</body>
+</html>
